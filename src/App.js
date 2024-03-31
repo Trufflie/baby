@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Navigate from "./components/Navigate";
+import { useState } from "react";
 
 function App() {
+  const [selectedPage, selectPage] = useState("home")
+  const handleSelectId = (selectedId) => {
+    selectPage(selectedId)
+    console.log("Selected ID: ", selectedId);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header onSelectId={handleSelectId} />
+      <Navigate 
+      id={selectedPage}
+      />
+      <Footer />
     </div>
   );
 }
