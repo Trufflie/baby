@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
+  height: 100vh;
   width: screen;
   background-image: linear-gradient(
     to bottom right,
@@ -12,10 +13,16 @@ body {
     #1e5490
   );
 }
+.active {
+  background-color: #1e5490;
+  border-radius: 30%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
 
 @media (min-width: 750px) {
   body {
-    height: 100vh;
+    height: 90vh;
   }
 }
 
@@ -68,7 +75,9 @@ body {
   border: none;
   cursor: pointer;
 }
-
+.selected {
+  opacity: 60%;
+}
 .modal-content .prev-button {
   left: 10px;
 }
@@ -97,4 +106,7 @@ body {
   height: 100px;
   margin: 0 10px;
   cursor: pointer;
+}
+.overflow {
+  overflow: hidden
 }

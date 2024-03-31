@@ -1,45 +1,45 @@
 import React from "react";
-import { useState } from "react";
 import '../index.css'
+// import { useState } from "react";
 const Header = ({ onSelectId }) => {
 
-const [selectedId, setSelectedId] = useState(null);
-
+// const [active, setActive] = useState("home")
 function handleClick(event) {
-		setSelectedId(event.target.id);
-		console.log(selectedId);
-	}
+  const target = event.target.id
+  onSelectId(target);
+
+}
   return (
     <div className="relative">
-      <div className="fixed top-0 right-0 h-[80px] w-screen flex items-center justify-end">
+      <div className="fixed top-0 right-0 h-[5vh] w-screen flex items-center justify-end">
       <ul className="flex">
           <li
             onClick={handleClick}
-            className={`p-2 ${selectedId === 'home' ? 'active' : ''}`}
+            
           >
-            <button id="home">Home</button>
+            <button className='text-white border-2 h-3 lg:h-11 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 my-8 mx-auto flex items-center' id="home">Home</button>
           </li>
           <li
             onClick={handleClick}
-            className={`p-2 ${selectedId === 'pictures' ? 'active' : ''}`}
+            
           >
-            <button id="pictures">Pictures</button>
+            <button className='text-white border-2 h-3 lg:h-11 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 my-8 mx-auto flex items-center' id="pictures">Pictures</button>
           </li>
           <li
             onClick={handleClick}
-            className={`p-2 ${selectedId === 'videos' ? 'active' : ''}`}
+            
           >
-            <button id="videos">Videos</button>
+            <button className='text-white border-2 h-3 lg:h-11 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 my-8 mx-auto flex items-center' id="videos">Videos</button>
           </li>
           <li
             onClick={handleClick}
-            className={`p-2 ${selectedId === 'rsvp' ? 'active' : ''}`}
+            
           >
-            <button id="rsvp">RSVP</button>
+            <button className='text-white border-2 h-3 lg:h-11 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 my-8 mx-auto flex items-center' id="rsvp">RSVP</button>
           </li>
         </ul>
       </div>
-      {onSelectId && onSelectId(selectedId)}
+     
     </div>
   );
 };

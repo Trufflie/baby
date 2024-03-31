@@ -4,17 +4,17 @@ import "../bubbles.css";
 const Bubbles = () => {
 	return (
 		<div>
-			<span class="bub a"></span>
-			<span class="bub b"></span>
-			<span class="bub c"></span>
-			<span class="bub d"></span>
-			<span class="bub e"></span>
-			<span class="bub f"></span>
-			<span class="bub g"></span>
-			<span class="bub h"></span>
-			<span class="bub i"></span>
-			<span class="bub j"></span>
-			<span class="bub k"></span>
+			<span className="bub a"></span>
+			<span className="bub b"></span>
+			<span className="bub c"></span>
+			<span className="bub d"></span>
+			<span className="bub e"></span>
+			<span className="bub f"></span>
+			<span className="bub g"></span>
+			<span className="bub h"></span>
+			<span className="bub i"></span>
+			<span className="bub j"></span>
+			<span className="bub k"></span>
 		</div>
 	);
 };

@@ -3,6 +3,7 @@ import Main from "./Main";
 import RSVP from "./RSVP";
 import Pictures from "./Pictures";
 import Videos from "./Videos";
+import About from "./About";
 
 const Navigate = (props) => {
 	const id = props.id;
@@ -12,6 +13,12 @@ const Navigate = (props) => {
 			return (
 				<div>
 					<RSVP />
+				</div>
+			);
+		case "about":
+			return (
+				<div>
+					<About />
 				</div>
 			);
 		case "pictures":

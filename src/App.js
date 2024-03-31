@@ -7,16 +7,18 @@ function App() {
   const [selectedPage, selectPage] = useState("home")
   const handleSelectId = (selectedId) => {
     selectPage(selectedId)
-    console.log("Selected ID: ", selectedId);
+    
   };
 
   return (
     <div>
-      <Header onSelectId={handleSelectId} />
+      <Header 
+      
+      onSelectId={handleSelectId} />
       <Navigate 
       id={selectedPage}
       />
-      <Footer />
+      <Footer onSelectId={handleSelectId}/>
     </div>
   );
 }
