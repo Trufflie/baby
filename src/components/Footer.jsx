@@ -1,11 +1,8 @@
 import React from "react";
 import { MdOutlineCopyright } from "react-icons/md";
 const Footer = ({ onSelectId }) => {
-	
-
 	function handleClick(event) {
 		onSelectId(event.target.id);
-		
 	}
 	const time = new Date().getFullYear();
 	return (
@@ -28,7 +25,6 @@ const Footer = ({ onSelectId }) => {
 					about this site
 				</button>
 			</p>
-			
 		</div>
 	);
 };

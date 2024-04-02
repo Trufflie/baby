@@ -1,9 +1,9 @@
 import React from "react";
 import '../index.css'
-// import { useState } from "react";
+
 const Header = ({ onSelectId }) => {
 
-// const [active, setActive] = useState("home")
+
 function handleClick(event) {
   const target = event.target.id
   onSelectId(target);
