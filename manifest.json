@@ -1,0 +1,9 @@
+{
+  "short_name": "Twinning!",
+  "name": "A website for our twins!",
+  
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4682b4",
+  "background_color": "#4682b4"
+} 
