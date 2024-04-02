@@ -1,7 +1,7 @@
 import React from "react";
 const RSVPForm = () => {
 	return (
-		<div className=" mt-[80px] h-[50vh] items-center justify-center text-center flex flex-col">
+		<div className=" mt-[80px] h-[30vh] md:h-[50vh] items-center justify-center text-center flex flex-col">
         <form
 			action="https://script.google.com/macros/s/AKfycbxEn1r0lP--v2XeXzkyM_XoZ-i_hZTtOoUb4m_mxIiwfjsixIH6EOuhT_g7LGyv1sJ8/exec"
 			method="Post"

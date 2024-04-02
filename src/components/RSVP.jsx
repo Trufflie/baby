@@ -9,10 +9,10 @@ const RSVP = () => {
       
 
       <div>
-        <h1  className=" text-purple-950 text-7xl">
+        <h1  className=" text-purple-900 text-4xl md:text-7xl">
           Baby Shower Details:{' '}
         </h1>
-        <p className=' m-5'>
+        <p className=' text-2xl text-blue-800 m-5'>
           We will be hosting a baby shower for our twins. The event will take
           place on Saturday, 18th of May, 2024. Please RSVP by
           filling out the form below.
