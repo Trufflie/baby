@@ -11,7 +11,7 @@ const About = () => {
         <p>over time i may add more functionality, or remove the site all together.</p>
         <p>If you have any issues (or want a site for yourself), please fill out this form.</p>
         
-        <form action="https://getform.io/f/zbxdolmb" method='Post' className='flex flex-col max-w-[600px] '>
+        <form data-netlify="true" action="https://getform.io/f/zbxdolmb" method='Post' className='flex flex-col max-w-[600px] '>
             <div className='pb-8'>
                 
    
