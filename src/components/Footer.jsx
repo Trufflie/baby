@@ -6,7 +6,7 @@ const Footer = ({ onSelectId }) => {
 	}
 	const time = new Date().getFullYear();
 	return (
-		<div className="h-[5vh] flex text-gray-700 w-screen justify-center bottom-0 fixed">
+		<div className="h-[5vh] flex text-gray-700 w-screen justify-center bottom-0 fixed size text-xxs md:text-sm lg:text-sm">
 			<a
 				href="mailto:owner@trufflie.com"
 				target="_blank"

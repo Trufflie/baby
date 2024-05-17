@@ -49,12 +49,12 @@ const Pictures = () => {
 	};
 
 	return (
-		<div className="mt-[80px] h-[30vh] md:h-[50vh] flex flex-col items-center text-center justify-center">
-			<h1 className="text-purple-900 text-7xl my-7"> Photo Gallery</h1>
+		<div className="mt-[80px] flex flex-col items-center text-center justify-center">
+			<h1 className="text-purple-900 text-4xl md:text-7xl my-7"> Photo Gallery</h1>
 			<p className="my-7 text-2xl text-blue-800"> click any picture to open full image!</p>
 			<div className="flex flex-wrap row">
 				
-				<div className=" container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 ">
+				<div className=" container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 overflow-y-auto h-72 ">
 					
 					{images.map((image, index) => (
 						<div

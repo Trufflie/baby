@@ -13,8 +13,15 @@ html {
     #1e5490
   );
 }
+:host {
+  background: rgba(128, 128, 128, 50%);
+}
+.modal-content{
+  
+    --tw-bg-opacity: 1;
+    background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 
-
+}
 @media (min-width: 750px) {
   body {
     height: 90vh;

@@ -18,7 +18,7 @@ function handleClick(event) {
   
   return (
     <div className="relative">
-      <div className="fixed top-0 right-0 h-[5vh] w-screen flex items-center justify-end">
+      <div className="m-5 fixed top-0 right-0 h-[5vh] w-screen flex items-center justify-end">
       <div
 				onClick={mobileClick}
 				className="md:hidden z-10"
