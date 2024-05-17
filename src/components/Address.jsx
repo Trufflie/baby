@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Address = (props) => {
-    const handleOpenMaps = () => {
-        const address = '14961 pinehaven rd. irvine, CA, 92604';
-        const mapsUrl = `maps://maps.apple.com/?q=${encodeURIComponent(address)}`;
-        const fallbackUrl = `https://www.google.com/maps/search/${encodeURIComponent(address)}`;
-      
-        // Check if the user has a maps app installed
-        const hasMapsApp = window.open(mapsUrl, "_blank");
-        if (!hasMapsApp) {
-          // If the maps app is not installed, open the fallback URL
-          window.open(fallbackUrl, "_blank");
-        }
-      };
+	const address = "14961 pinehaven rd. irvine, CA, 92604";
+	const mapsUrl = `maps://maps.apple.com/?q=${encodeURIComponent(address)}`;
+	const fallbackUrl = `https://www.google.com/maps/search/${encodeURIComponent(
+		address
+	)}`;
+	const [copied, setCopied] = useState(false);
+	const [fadeOut, setFadeOut] = useState(false);
+	const handleOpenMaps = () => {
+		// Check if the user has a maps app installed
+		const hasMapsApp = window.open(mapsUrl, "_blank");
+		if (!hasMapsApp) {
+			// If the maps app is not installed, open the fallback URL
+			window.open(fallbackUrl, "_blank");
+		}
+	};
+	function handleCopy() {
+		navigator.clipboard.writeText(address);
+		setCopied(true);
+		setFadeOut(true);
+	}
 	return (
 		<div
 			id="addressModal"
@@ -41,9 +49,21 @@ const Address = (props) => {
 					<div className="modal-content">
 						<div className="">
 							<h2>The Shower will be at Bonne Maman's House</h2>
-						</div>
-						<div className="">
 							<p>14961 pinehaven rd. irvine, CA, 92604</p>
+							<button
+								className={`transition duration-1000  ${
+									fadeOut ? "opacity-0" : "opacity-100"
+								} ${
+									copied
+										? "bg-purple-600 text-white border-2 px-2 py-1 my-2 mx-auto flex items-center border-purple-600"
+										: "text-purple-600 hover:text-white border-2 hover:bg-purple-600 hover:border-purple-600 px-2 py-1 my-2 mx-auto flex items-center border-purple-600"
+								}`}
+								//  className={copied?"bg-purple-600 text-white border-2 px-2 py-1 my-2 mx-auto flex items-center border-purple-600 transition-opacity" : "text-purple-600 hover:text-white border-2 hover:bg-purple-600 hover:border-purple-600 px-2 py-1 my-2 mx-auto flex items-center border-purple-600"}
+
+								onClick={handleCopy}
+							>
+								{copied ? "Copied!" : "Copy Address"}
+							</button>
 						</div>
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.6547046758324!2d-117.78455682383428!3d33.692004036665196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdcff18662acf%3A0x5298644027980e4c!2s14961%20Pinehaven%20Rd%2C%20Irvine%2C%20CA%2092604!5e0!3m2!1sen!2sus!4v1715911853421!5m2!1sen!2sus"
@@ -56,13 +76,13 @@ const Address = (props) => {
 						<div className="flex justify-center px-3">
 							<button
 								onClick={props.closeModal}
-								className="text-purple-600 hover:text-white border-2 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 my-8 mx-auto flex items-center border-purple-600"
+								className="text-purple-600 hover:text-white border-2 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 m-5 mr-1 mx-auto flex items-center border-purple-600"
 							>
 								Close
 							</button>
 							<button
 								onClick={handleOpenMaps}
-								className="text-purple-600 hover:text-white border-2 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 my-8 mx-auto flex items-center border-purple-600"
+								className="text-purple-600 hover:text-white border-2 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 m-5 ml-1 mx-auto flex items-center border-purple-600"
 							>
 								Apple Maps
 							</button>

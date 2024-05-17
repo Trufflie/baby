@@ -35,7 +35,7 @@ const RSVP = () => {
 					Please RSVP by filling out the form below.
 				</p>
         <div className="flex ">
-        <button onClick={openModal} className="text-white border-2 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 my-8 mx-auto flex items-center">Click for Address</button>
+        <button onClick={openModal} className="text-white border-2 hover:bg-purple-600 hover:border-purple-600 px-4 py-3 mb-4 mx-auto flex items-center">Click for Address</button>
         </div>
 
 				<RSVPForm />

@@ -7,7 +7,8 @@ const RSVPForm = () => {
 				data-netlify="true"
 				action="https://script.google.com/macros/s/AKfycbxEn1r0lP--v2XeXzkyM_XoZ-i_hZTtOoUb4m_mxIiwfjsixIH6EOuhT_g7LGyv1sJ8/exec"
 				method="post"
-				className="flex flex-col max-w-[600px] "
+				className="flex flex-col max-w-[600px]"
+				netlify
 			>
 				<input
 					className="my-2 p-2 bg-[ccd6f6]"
